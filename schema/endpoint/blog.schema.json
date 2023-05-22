@@ -1,0 +1,205 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/DeMineArchiver/BoostyAPI/master/schema/endpoint/blog.schema.json",
+    "title": "Boosty Blog Schema",
+    "description": "Describes a Boosty API blog endpoint response",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "../template/textBlock.schema.json"
+        },
+        "isOwner": {
+            "type": "boolean",
+            "default": false
+        },
+        "socialLinks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "twitch",
+                            "youtube",
+                            "twitter"
+                        ]
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            }
+        },
+        "flags": {
+            "$ref": "#/$defs/flags"
+        },
+        "blogUrl": {
+            "type": "string",
+            "minLength": 1
+        },
+        "count": {
+            "type": "object",
+            "properties": {
+                "posts": {
+                    "type": "integer",
+                    "default": 0
+                },
+                "subscribers": {
+                    "type": "integer",
+                    "default": 0
+                }
+            }
+        },
+        "publicWebSocketChannel": {
+            "type": "string",
+            "pattern": "^blogger:\\d+$"
+        },
+        "isReadOnly": {
+            "type": "boolean",
+            "default": false
+        },
+        "title": {
+            "type": "string"
+        },
+        "isSubscribed": {
+            "type": "boolean"
+        },
+        "hasAdultContent": {
+            "type": "boolean",
+            "default": false
+        },
+        "isBlackListed": {
+            "type": "boolean",
+            "default": false
+        },
+        "isBlackListedByUser": {
+            "type": "boolean",
+            "default": false
+        },
+        "isTotalBaned": {
+            "description": "The mistake in the name is intentional",
+            "type": "boolean",
+            "default": false
+        },
+        "coverUrl": {
+            "type": "string",
+            "format": "uri"
+        },
+        "channelCoverImageUrl": {
+            "type": "string",
+            "default": "",
+            "format": "uri"
+        },
+        "channelCoverType": {
+            "type": "string",
+            "default": "default",
+            "enum": [
+                "default"
+            ]
+        },
+        "subscription": {
+            "type": "null"
+        },
+        "subscriptionKind": {
+            "type": "string",
+            "default": "none",
+            "enum": [
+                "none"
+            ]
+        },
+        "owner": {
+            "$ref": "#/$defs/user"
+        },
+        "accessRights": {
+            "$ref": "#/$defs/accessRights"
+        }
+    },
+    "$defs": {
+        "user": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "displayName": {
+                    "type": "string"
+                },
+                "nick": {
+                    "type": "string",
+                    "default": ""
+                },
+                "vkplayProfileLink": {
+                    "type": "string",
+                    "default": "",
+                    "format": "uri"
+                },
+                "hasAvatar": {
+                    "type": "boolean"
+                },
+                "avatarUrl": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "nickColor": {
+                    "type": "integer",
+                    "description": "Currently unknown"
+                }
+            }
+        },
+        "accessRights": {
+            "type": "object",
+            "properties": {
+                "canEdit": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "canDeleteComments": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "canView": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "canCreateComments": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "canCreate": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "canSetPayout": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "flags": {
+            "type": "object",
+            "properties": {
+                "allowIndex": {
+                    "type": "boolean"
+                },
+                "acceptDonationMessages": {
+                    "type": "boolean"
+                },
+                "isRssFeedEnabled": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "hasSubscriptionLevels": {
+                    "type": "boolean"
+                },
+                "showPostDonations": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

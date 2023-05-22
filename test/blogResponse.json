@@ -1,0 +1,95 @@
+{
+    "$schema": "../schema/endpoint/blog.schema.json",
+    "count": {
+      "posts": 0,
+      "subscribers": 0
+    },
+    "coverUrl": "https://images.boosty.to/blog/995794/cover?change_time=1668605609",
+    "isReadOnly": false,
+    "publicWebSocketChannel": "blogger:995794",
+    "accessRights": {
+      "canView": false,
+      "canCreate": false,
+      "canSetPayout": false,
+      "canDeleteComments": false,
+      "canCreateComments": false,
+      "canEdit": false
+    },
+    "isBlackListed": false,
+    "channelCoverType": "default",
+    "isSubscribed": false,
+    "description": [
+      {
+        "modificator": "",
+        "type": "text",
+        "content": "[\"I just like doing random things!\",\"unstyled\",[[0,0,32]]]"
+      },
+      {
+        "content": "",
+        "type": "text",
+        "modificator": "BLOCK_END"
+      },
+      {
+        "modificator": "BLOCK_END",
+        "content": "",
+        "type": "text"
+      },
+      {
+        "content": "[\"\",\"unstyled\",[]]",
+        "type": "text",
+        "modificator": ""
+      },
+      {
+        "type": "text",
+        "content": "",
+        "modificator": "BLOCK_END"
+      },
+      {
+        "content": "",
+        "type": "text",
+        "modificator": "BLOCK_END"
+      }
+    ],
+    "hasAdultContent": false,
+    "channelCoverImageUrl": "",
+    "blogUrl": "deminearchiver",
+    "isBlackListedByUser": false,
+    "title": "random things",
+    "subscription": null,
+    "socialLinks": [
+      {
+        "type": "twitch",
+        "url": "https://www.twitch.tv/deminearchiver"
+      },
+      {
+        "url": "https://twitter.com/minearchiver",
+        "type": "twitter"
+      },
+      {
+        "url": "https://www.youtube.com/@DeMineArchiver",
+        "type": "youtube"
+      }
+    ],
+    "isTotalBaned": false,
+    "signedQuery": "",
+    "owner": {
+      "name": "DeMineArchiver",
+      "id": 995794,
+      "displayName": "DeMineArchiver",
+      "vkplayProfileLink": "",
+      "nickColor": 1,
+      "avatarUrl": "https://images.boosty.to/user/995794/avatar?change_time=1668605509",
+      "isVerifiedStreamer": false,
+      "nick": "",
+      "hasAvatar": true
+    },
+    "flags": {
+      "acceptDonationMessages": true,
+      "showPostDonations": true,
+      "isRssFeedEnabled": false,
+      "hasSubscriptionLevels": true,
+      "allowIndex": false
+    },
+    "subscriptionKind": "none",
+    "isOwner": false
+  }

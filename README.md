@@ -3,6 +3,8 @@ Figuring out Boosty's public API and writing documentation for it.
 
 <h2><u>Note: this repository is work-in-progress.</u></h2>
 
+Google Sheets link: https://docs.google.com/spreadsheets/d/1lxdKjmIvfWAhktv2Wvkdp2gEGr0knQWBPnGxfOUM6xA/edit?usp=sharing
+
 
 ## Base API Route
 `https://api.boosty.to/v1`
